@@ -1,0 +1,91 @@
+.body {
+    z-index: 0;
+}
+a {
+    color: black!important;
+}
+a:hover {
+	color: black!important;
+}
+.background-grid1 {
+    width: 100%;
+    height: 1500px;
+    background-image: url("asset/img/background-img02_dep2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.navbar-custom {
+    background-color: #ffffff;
+    z-index: 3!important;
+}
+.container {
+    width: 1000px;
+}
+.postlist {
+    width: 1000px;
+    height: 1200px;
+    background-color: #FFFFFF;
+    z-index: 3;
+    position: relative;
+    left: 50%;
+    margin-left: -500px;
+    top: 100px;
+    z-index: 0;
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+}
+.post-menus {
+	padding: 15px;
+	height: 60px;
+	width: 1000px;
+}
+.post-menus>.nav>.nav-item:hover {
+	border-bottom: 3px solid #DDDDDD;
+}
+.post-menus>.nav>.nav-active {
+	border-bottom: 3px solid #DDDDDD!important;
+}
+.list-group {
+    margin-top: 6px;
+}
+.choose-list {
+    color:;
+}
+.list-group-item {
+    height: 40px;
+}
+.icon-setting {
+    position: relative;
+    top: -2px;
+    left: 8px;
+    width: 0;
+    font-size: 15px!important;
+}
+.voted > .icon-setting {
+    font-size: 17px!important;
+    color: black;
+    position: relative;
+    left: -17px;
+}
+.voted > .up-score {
+    color: black;
+    position: relative;
+    left: 10px;
+}
+.voted > .badge-setting {
+    position: relative;
+    top: -1px;
+    left: 5px;
+}
+.school-info {
+	position: absolute;
+	top: -25px;
+	left: 20px;
+}
+.school-info>p {
+	font-size: 15px;
+}
+.school-info>img {
+	position: relative;
+	top: -3px;
+	left: 3px;
+}

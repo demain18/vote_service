@@ -1,0 +1,37 @@
+.my-navbar {
+	width: 100%;
+	height: 40px;
+	background-color: white;
+}
+.navbar-container {
+	width: 1000px;
+	height: 40px;
+	position: relative;
+	left: 50%;
+	margin-left: -500px;
+}
+.brand {
+	position: relative;
+	line-height: 40px;
+}
+.img-position01 {
+	position: relative;
+	top: -1px;
+	left: 5px;
+}
+.alerm {
+	position: relative;
+	top: 5px;
+	left: 760px;
+}
+.account {
+	position: relative;
+	top: 5px;
+	left: 775px;
+}
+a {
+    color: black!important;
+}
+a:hover {
+	color: black!important;
+}
