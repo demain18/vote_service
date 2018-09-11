@@ -4,9 +4,18 @@
 .background-grid1 {
     width: 100%;
     height: 1500px;
-    background-image: url("asset/img/background-img02_dep2.jpg");
+    background-color: white;
+	/* background-image: url("asset/img/background-img02_dep2.jpg");
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; */
+}
+.background-color01 {
+	width: 100%;
+	height: 400px;
+	background-color: #3F51B5;
+	position: absolute;
+	top: 40px;
+	
 }
 .navbar-custom {
     background-color: #ffffff;
@@ -23,9 +32,21 @@
     position: relative;
     left: 50%;
     margin-left: -500px;
-    top: 100px;
+    top: 50px;
     z-index: 0;
 	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+}
+.btn-write {
+	background-color: #3F51B5!important;
+	width: 110px;
+	position: absolute;
+	bottom: -75px;
+	left: 878px;
+}
+.board-title {
+	position: absolute;
+	top: 90px;
+	left: 9px;
 }
 .post-menus {
 	height: 60px;
@@ -33,11 +54,10 @@
 	margin-top: -40px;
 }
 .post-menus>.nav>.nav-item:hover {
+	border-bottom: 3px solid #DFDFDF!important;
 }
 .post-menus>.nav>.nav-active {
-	border-bottom: 5px solid #DFDFDF!important;
-	border-left: 5px solid #DFDFDF!important;
-	border-right: 5px solid #DFDFDF!important;
+	border-bottom: 3px solid #DFDFDF!important;
 }
 /*
 .list-group {
@@ -87,8 +107,11 @@
 }
 */
 .menu-list {
+	border-top: 3px solid black;
 	border-bottom: 1px solid #DFDFDF;
-	margin-top: 5px;
+	margin-top: 55px;
+	width: 978px;
+	margin-left: 10px;
 }
 .menu {
 	line-height: 40px;
@@ -103,11 +126,11 @@
 }
 .menu03 {
 	position: relative;
-	left: 765px;
+	left: 750px;
 }
 .menu04 {
 	position: relative;
-	left: 780px;
+	left: 765px;
 }
 .post-grid {
 	margin-top: -30px;
@@ -122,12 +145,12 @@
 }
 .post-number {
 	position: absolute;
-	left: 5px;
+	left: 25px;
 	text-align: center;
 }
 .post-name {
 	position: absolute;
-	left: 50px;
+	left: 70px;
 }
 .post-name:hover {
 	text-decoration: underline!important;
@@ -135,23 +158,24 @@
 }
 .post-upload-date {
 	position: absolute;
-	left: 830px;
+	left: 823px;
 }
 .post-like {
 	position: absolute;
-	left: 936px;
-}
-.btn-set01 {
-	width: 110px;
-	position: absolute;
-	bottom: 45px;
-	left: 890px;
+	left: 930px;
 }
 .icon-set02 {
 	font-size: 16px!important;
 	position: relative;
 	top: 2px;
 	left: 8px;
+}
+.icon-set03 {
+	font-size: 15px!important;
+	color: red;
+	position: relative;
+	top: 1px;
+	left: 5px;
 }
 .badge-voted {
 	position: relative;
