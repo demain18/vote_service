@@ -20,14 +20,14 @@
 	left: 5px;
 }
 .alerm {
-	position: relative;
+	position: absolute;
 	top: 5px;
-	left: 760px;
+	left: 920px;
 }
 .account {
-	position: relative;
+	position: absolute;
 	top: 5px;
-	left: 775px;
+	left: 970px;
 }
 a {
     color: black!important;

@@ -126,13 +126,22 @@ a:visited {
     height: 100px;
 }
 .product-intro {
-    position: relative;
-    top: -30px;
+	width: 650px;
+	position: relative;
+	left: 50%;
+	margin-left: -325px;
 }
 .product-intro > p {
-    text-align: center;
+    text-align: left;
     font-size: 20px;
+	line-height: 25px;
 }
 .linkcolor {
     color: white;
+}
+.footer {
+	background-color: #C0C0C0;
+}
+.footer>.footer-grid01 {
+	margin-left: 50px;
 }

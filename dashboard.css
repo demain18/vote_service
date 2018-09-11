@@ -1,12 +1,6 @@
 .body {
     z-index: 0;
 }
-a {
-    color: black!important;
-}
-a:hover {
-	color: black!important;
-}
 .background-grid1 {
     width: 100%;
     height: 1500px;
@@ -34,16 +28,18 @@ a:hover {
 	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
 }
 .post-menus {
-	padding: 15px;
 	height: 60px;
 	width: 1000px;
+	margin-top: -40px;
 }
 .post-menus>.nav>.nav-item:hover {
-	border-bottom: 3px solid #DDDDDD;
 }
 .post-menus>.nav>.nav-active {
-	border-bottom: 3px solid #DDDDDD!important;
+	border-bottom: 5px solid #DFDFDF!important;
+	border-left: 5px solid #DFDFDF!important;
+	border-right: 5px solid #DFDFDF!important;
 }
+/*
 .list-group {
     margin-top: 6px;
 }
@@ -88,4 +84,77 @@ a:hover {
 	position: relative;
 	top: -3px;
 	left: 3px;
+}
+*/
+.menu-list {
+	border-bottom: 1px solid #DFDFDF;
+	margin-top: 5px;
+}
+.menu {
+	line-height: 40px;
+}
+.menu01 {
+	position: relative;
+	left: 10px;
+}
+.menu02 {
+	position: relative;
+	left: 390px;
+}
+.menu03 {
+	position: relative;
+	left: 765px;
+}
+.menu04 {
+	position: relative;
+	left: 780px;
+}
+.post-grid {
+	margin-top: -30px;
+}
+.post-grid>p {
+	line-height: 50px;
+	padding: 8px;
+	border-bottom: #DFDFDF;
+}
+.post {
+	position: relative;
+}
+.post-number {
+	position: absolute;
+	left: 5px;
+	text-align: center;
+}
+.post-name {
+	position: absolute;
+	left: 50px;
+}
+.post-name:hover {
+	text-decoration: underline!important;
+	cursor: pointer;
+}
+.post-upload-date {
+	position: absolute;
+	left: 830px;
+}
+.post-like {
+	position: absolute;
+	left: 936px;
+}
+.btn-set01 {
+	width: 110px;
+	position: absolute;
+	bottom: 45px;
+	left: 890px;
+}
+.icon-set02 {
+	font-size: 16px!important;
+	position: relative;
+	top: 2px;
+	left: 8px;
+}
+.badge-voted {
+	position: relative;
+	top: -2px;
+	left: 7px;
 }
