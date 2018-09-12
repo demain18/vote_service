@@ -52,7 +52,7 @@
 	margin-top: 30px;
 }
 .input1 {
-	width: 300px;
+	width: 400px;
 }
 .td2 {
 	margin-top: 20px;
@@ -61,6 +61,7 @@
 	width: 120px;
 	background-color: #3F51B5!important;
 	position: relative;
+	top: 60px;
 	left: 475px;
 }
 .btn-write2 {
@@ -68,5 +69,5 @@
 	background-color: #FFFFFF!important;
 	color: black!important;
 	position: relative;
-	left: 220px;
+	left: 350px;
 }

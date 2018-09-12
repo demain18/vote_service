@@ -3,11 +3,9 @@
 }
 .background-grid1 {
     width: 100%;
-    height: 1500px;
+    height: 1080px;
     background-color: white;
-	/* background-image: url("asset/img/background-img02_dep2.jpg");
-    background-size: cover;
-    background-attachment: fixed; */
+	/* background-image: url("asset/img/background-img07.jpg"); */
 }
 .background-color01 {
 	width: 100%;
@@ -26,7 +24,7 @@
 }
 .postlist {
     width: 1000px;
-    height: 1200px;
+    height: 900px;
     background-color: #FFFFFF;
     z-index: 3;
     position: relative;
@@ -35,6 +33,8 @@
     top: 50px;
     z-index: 0;
 	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+	border: 1px solid white;
+	border-radius: 3px;
 }
 .btn-write {
 	background-color: #3F51B5!important;
@@ -181,4 +181,14 @@
 	position: relative;
 	top: -2px;
 	left: 7px;
+}
+.school-info {
+	position: absolute;
+	top: 910px;
+	left: 820px;
+}
+.img-setting01 {
+	position: relative;
+	top: -2px;
+	left: 5px;
 }

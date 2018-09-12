@@ -25,7 +25,7 @@ a:visited {
 .background-grid1 {
     width: 100%;
     height: 600px;
-    background-image: url("asset/img/background-img02_dep2.jpg");
+    background-image: url("asset/img/background-img10.jpg");
     background-size: cover;
     z-index: 1;
 }
@@ -120,10 +120,10 @@ a:visited {
     margin-bottom: 30px;
 }
 .background-grid2 {
-    height: 550px;
+    height: 480px;
 }
 .background-grid3 {
-    height: 100px;
+
 }
 .product-intro {
 	width: 650px;
@@ -144,4 +144,9 @@ a:visited {
 }
 .footer>.footer-grid01 {
 	margin-left: 50px;
+	margin-top: 20px;
+}
+.footer>.footer-grid02 {
+	margin-left: 30px;
+	margin-top: 10px;
 }
