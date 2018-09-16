@@ -12,7 +12,7 @@
         <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
         <script>
-            
+
                 $(document).ready(function () {
                     $('body').bootstrapMaterialDesign();
                 });
@@ -44,8 +44,8 @@
                         </ul>
                     </div>
                 </nav>-->
-				
-				
+
+
 				<div class="my-navbar">
 					<div class="navbar-container">
 						<span class="brand"><a href="index.html"><strong>청원서비스</strong></a></span>
@@ -53,8 +53,8 @@
 						<span class="account navbar-icon-setting"><a href="login.html"><em class="material-icons">account_circle</em></a></span>
 					</div>
 				</div>
-				
-				
+
+
 				<!--<span class="school-info row"><p><strong>서울아이티고등학교</strong></p><img src="asset/img/highschool-logo1.png" width="30" height="25"></span>-->
                 <div class="postlist">
 					<a href="writing.html">
@@ -110,7 +110,7 @@
 							<span class="post-number">4</span>
 							<a href="#"><span class="post-name"> <?php echo $_REQUEST['title'] ?> </span></a>
 							<span class="post-upload-date">2018-09-10</span>
-							<span class="post-like"><strong>[25]</strong></span>
+							<span class="post-like"><strong>[0]</strong></span>
 						</p>
 						<p class="post post-number01">
 							<span class="post-number">3</span>
