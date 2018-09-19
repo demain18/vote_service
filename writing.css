@@ -4,7 +4,7 @@
 .background-grid1 {
     width: 100%;
     height: 1500px;
-    background-color: white;
+    background-color: #F5F5F5;
 	/* background-image: url("asset/img/background-img02_dep2.jpg");
     background-size: cover;
     background-attachment: fixed; */
@@ -12,7 +12,8 @@
 .background-color01 {
 	width: 100%;
 	height: 400px;
-	background-color: #3F51B5;
+	background: rgb(68,57,255);
+    background: linear-gradient(90deg, rgba(68,57,255,1) 0%, rgba(99,99,255,1) 37%, rgba(123,212,249,1) 100%);
 	position: absolute;
 	top: 40px;
 	
@@ -26,7 +27,7 @@
 }
 .postlist {
     width: 1000px;
-    height: 1200px;
+    height: 800px;
     background-color: #FFFFFF;
     z-index: 3;
     position: relative;
@@ -40,13 +41,18 @@
 .writing-rules {
 	width: 100%;
 	border: 1px solid #DBDBDB;
+	border-radius: 5px;
 	padding: 20px;
 	padding-bottom: 5px;
+}
+.td1 {
+	margin-top: 10px!important;
 }
 .writing-rules>p {
 	font-size: 15px;
 	line-height: 20px;
 	color: #565656;
+	margin-top: -8px;
 }
 .margin1 {
 	margin-top: 30px;

@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
         <link rel="stylesheet" href="dashboard.css">
-		<link rel="stylesheet" href="my-navbar.css">
+        <link rel="stylesheet" href="my-navbar.css">
         <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
@@ -23,7 +23,7 @@
         </head>
         <body>
             <div class="background-grid1">
-				<div class="background-color01"></div>
+                <div class="background-color01"></div>
                 <!--<nav class="navbar sticky-top navbar-expand-lg navbar-light navbar-custom">
                     <a class="navbar-brand" href="index.html">
                         <strong>
@@ -44,40 +44,49 @@
                         </ul>
                     </div>
                 </nav>-->
-				
-				
-				<div class="my-navbar">
-					<div class="navbar-container">
-						<span class="brand"><a href="index.html"><strong>청원서비스</strong></a></span>
-						<span class="alerm navbar-icon-setting"><em class="material-icons">notifications</em></span>
-						<span class="account navbar-icon-setting"><a href="login.html"><em class="material-icons">account_circle</em></a></span>
-					</div>
-				</div>
-				
-				
-				<!--<span class="school-info row"><p><strong>서울아이티고등학교</strong></p><img src="asset/img/highschool-logo1.png" width="30" height="25"></span>-->
-                <div class="postlist">
-					<a href="writing.html">
-						<button type="button" class="btn btn-raised btn-primary btn-write">글 쓰기<em class="material-icons icon-set02">edit</em></button>
-					</a>
-					<h5 class="board-title"><strong>최다 추천 청원 목록</strong></h5>
-					<div class="post-menus">
-                        <ul class="nav nav-pills nav-fill">
-						  <li class="nav-item">
-							<a class="nav-link" href="#">전체</a>
-						  </li>
-						  <li class="nav-item nav-active">
-							<a class="nav-link" href="#">최신인기</a>
-						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" href="#">청원투표</a>
-						  </li>
-						  <li class="nav-item">
-							  <a class="nav-link disabled" href="#">청원다시보기</a>
-						  </li>
-						</ul>
+                <div class="my-navbar">
+                    <div class="navbar-container">
+                        <span class="brand">
+                            <a href="index.html">
+                                <strong>청원서비스</strong>
+                            </a>
+                        </span>
+                        <span class="alerm navbar-icon-setting">
+                            <em class="material-icons">notifications</em>
+                        </span>
+                        <span class="account navbar-icon-setting">
+                            <a href="login.html">
+                                <em class="material-icons">account_circle</em>
+                            </a>
+                        </span>
                     </div>
-					<!--
+                </div>
+                <!--<span class="school-info row"><p><strong>서울아이티고등학교</strong></p><img src="asset/img/highschool-logo1.png" width="30" height="25"></span>-->
+                <div class="postlist">
+                    <a href="writing.html">
+                        <button type="button" class="btn btn-raised btn-primary btn-write">글 쓰기<em class="material-icons icon-set02">edit</em>
+                        </button>
+                    </a>
+                    <h5 class="board-title">
+                        <strong>최다 추천 청원 목록</strong>
+                    </h5>
+                    <div class="post-menus">
+                        <ul class="nav nav-pills nav-fill">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">전체</a>
+                            </li>
+                            <li class="nav-item nav-active">
+                                <a class="nav-link" href="#">최신인기</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">청원투표</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">청원다시보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--
                     <ul class="list-group">
                         <button type="button" class="list-group-item voted">동아리시간을 늘려주세요
                             <span class="badge badge-pill badge-warning badge-setting">채택됨!
@@ -99,42 +108,223 @@
                         </button>
                     </ul>
 					-->
-					<p class="menu-list">
-						<span class="menu menu01">번호</span>
-						<span class="menu menu02">제목</span>
-						<span class="menu menu03">청원기간</span>
-						<span class="menu menu04">참여인원</span>
+                    <p class="menu-list">
+                        <span class="menu menu01">번호</span>
+                        <span class="menu menu02">제목</span>
+                        <span class="menu menu03">청원일</span>
+                        <span class="menu menu04">참여인원</span>
+                    </p>
+                    <div class="post-grid">
+						<!--
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                            <p class="post post-number01">
+												<span class="post-number">3</span>
+												<span class="post-name">학교 비품을 쉽게 빌릴수 있게 해주세요<em class="material-icons icon-set03">check_circle</em></span>
+												<span class="post-upload-date">2018-09-10</span>
+												<span class="post-like"><strong>[25]</strong></span>
+											</p>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse in">
+                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                        <p class="post post-number01">
+                                            <span class="post-number">2</span>
+                                            <span class="post-name">체육관을 자유롭게 이용할 수 있게 해주세요.</span>
+                                            <span class="post-upload-date">2018-09-10</span>
+                                            <span class="post-like">
+                                                <strong>[8]</strong>
+                                            </span>
+                                        </p>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse">
+                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                        <p class="post post-number01">
+                                            <span class="post-number">1</span>
+                                            <span class="post-name">점심시간에 나오는 거지같은 가요좀 꺼주세요.</span>
+                                            <span class="post-upload-date">2018-09-10</span>
+                                            <span class="post-like">
+                                                <strong>[15]</strong>
+                                            </span>
+                                        </p>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse3" class="panel-collapse collapse">
+                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            </div>
+                        </div>
+                    </div>
+						-->
+					<div class="col-md-6 col-sm-6 accordion-margin">
+						<div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">
+						  <div class="panel">
+							<div class="panel-heading" role="tab" id="headingOne">
+							  <h4 class="panel-title">
+							<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTest" aria-expanded="true" aria-controls="collapseOne">
+							  <p class="post post-number01">
+								<span class="post-number">4</span>
+								<span class="post-name"><?php echo $_REQUEST['post-title']?></span>
+								<span class="post-upload-date">2018-09-10</span>
+								<span class="post-like">
+									<strong>[0]</strong>
+								</span>
+							</p>
+							</a>
+						  </h4>
+							</div>
+							<div id="collapseTest" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+							  <div class="panel-body">
+								<p class="post-text"><?php echo $_REQUEST['post-text']?></p>
+								<button type="button" class="btn btn-primary vote-agree">청원동의</button>
+							  </div>
+							</div>
+						  </div>
+							
+						  <div class="panel">
+							<div class="panel-heading" role="tab" id="headingOne">
+							  <h4 class="panel-title">
+							<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							  <p class="post post-number01">
+								<span class="post-number">3</span>
+								<span class="post-name">학교 비품을 사용하기 불편합니다.<em class="material-icons icon-set03">check_circle</em></span>
+								<span class="post-upload-date">2018-09-10</span>
+								<span class="post-like">
+									<strong>[25]</strong>
+								</span>
+							</p>
+							</a>
+						  </h4>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+							  <div class="panel-body">
+								<p class="post-text">학교에서 배드민턴채나 농구공등의 비품을 빌리는데 절차가 너무 복잡하고 어렵습니다, 농구부나 축구부는 말 한마디 만으로<br>공을 빌릴 수 있는데 일반 학생은 공을 빌리는데 절차가 까다롭습니다. 일반 학생도 쉽게 비품을 빌릴 수 있도록 바뀌었으면<br> 좋겠습니다.</p>
+								<button type="button" class="btn btn-primary vote-agree">청원동의</button>
+							  </div>
+							</div>
+						  </div>
+						  <!-- end of panel -->
+						  
+						  <div class="panel">
+							<div class="panel-heading" role="tab" id="headingTwo">
+							  <h4 class="panel-title">
+							<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							<p class="post post-number01">
+								<span class="post-number">2</span>
+								<span class="post-name">체육관을 자유롭게 이용할 수 있게 해주세요.</span>
+								<span class="post-upload-date">2018-09-10</span>
+								<span class="post-like">
+									<strong>[8]</strong>
+								</span>
+							</p>
+							</a>
+						  </h4>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+							  <div class="panel-body">
+								<p class="post-text">학교의 체육관을 태권도부가 모두 사용하고 있어서 농구나 배드민턴등 운동이 하고싶은 일반 학생은 갈곳이 없습니다, 일반 학생들에게도<br>체육관을 열어주세요.</p>
+								<button type="button" class="btn btn-primary vote-agree">청원동의</button>
+							  </div>
+							</div>
+						  </div>
+						  <!-- end of panel -->
+
+						  <div class="panel">
+							<div class="panel-heading" role="tab" id="headingThree">
+							  <h4 class="panel-title">
+							<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							  <p class="post post-number01">
+								<span class="post-number">1</span>
+								<span class="post-name">점심시간에 나오는 거지같은 가요좀 꺼주세요.</span>
+								<span class="post-upload-date">2018-09-10</span>
+								<span class="post-like">
+									<strong>[15]</strong>
+								</span>
+							</p>
+							</a>
+						  </h4>
+							</div>
+							<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+							  <div class="panel-body">
+							    <p class="post-text">점심시간에 나오는 노래를 어디서 선곡하는지는 모르겠지만... 존나 올드한 노래만 틀어줘서 듣기도 싫습니다.<br>학생들이 직접 나올 노래를 정할 수 있게 해주세요. </p>
+							    <button type="button" class="btn btn-primary vote-agree">청원동의</button>
+							  </div>
+							</div>
+						  </div>
+						  <!-- end of panel -->
+						  <!-- panel example
+						  <div class="panel">
+							<div class="panel-heading" role="tab" id="headingFour">
+							  <h4 class="panel-title">
+							<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+							  Collapsible item #4
+							</a>
+						  </h4>
+							</div>
+							<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+							  <div class="panel-body">
+								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+							  </div>
+							</div>
+						  </div-->
+						</div>
+						<!-- end of #accordion -->
+
+					  </div>
+					<!--
+                    <p class="post post-number01">
+						<span class="post-number">3</span>
+						<span class="post-name">학교 비품을 쉽게 빌릴수 있게 해주세요<em class="material-icons icon-set03">check_circle</em></span>
+						<span class="post-upload-date">2018-09-10</span>
+						<span class="post-like">
+							<strong>[25]</strong>
+						</span>
 					</p>
-					<div class="post-grid">
-						<p class="post post-number01">
-							<span class="post-number">4</span>
-							<a href="#"><span class="post-name">
-                            </span></span></a>
-							<span class="post-upload-date">2018-09-10</span>
-							<span class="post-like"><strong>[25]</strong></span>
-						</p>
-						<p class="post post-number01">
-							<span class="post-number">3</span>
-							<a href="#"><span class="post-name">학교 비품을 쉽게 빌릴수 있게 해주세요<em class="material-icons icon-set03">check_circle</em>
-                            </span></span></a>
-							<span class="post-upload-date">2018-09-10</span>
-							<span class="post-like"><strong>[25]</strong></span>
-						</p>
-						<p class="post post-number01">
-							<span class="post-number">2</span>
-							<span class="post-name">체육관을 자유롭게 이용할 수 있게 해주세요.</span>
-							<span class="post-upload-date">2018-09-10</span>
-							<span class="post-like"><strong>[8]</strong></span>
-						</p>
-						<p class="post post-number01">
-							<span class="post-number">1</span>
-							<span class="post-name">점심시간에 나오는 거지같은 가요좀 꺼주세요.</span>
-							<span class="post-upload-date">2018-09-10</span>
-							<span class="post-like"><strong>[15]</strong></span>
-						</p>
-					</div>
-				<span class="school-info"><strong>서울아이티고등학교</strong><img src="asset/img/highschool-logo1.png" width="25" height="22" class="img-setting01"></span>
-                </div>
+					<p class="post post-number01">
+						<span class="post-number">2</span>
+						<span class="post-name">체육관을 자유롭게 이용할 수 있게 해주세요.</span>
+						<span class="post-upload-date">2018-09-10</span>
+						<span class="post-like">
+							<strong>[8]</strong>
+						</span>
+					</p>
+					<p class="post post-number01">
+						<span class="post-number">1</span>
+						<span class="post-name">점심시간에 나오는 거지같은 가요좀 꺼주세요.</span>
+						<span class="post-upload-date">2018-09-10</span>
+						<span class="post-like">
+							<strong>[15]</strong>
+						</span>
+					</p>
+					-->
             </div>
-        </body>
-    </html>
+            <span class="school-info">
+                <strong>서울아이티고등학교</strong><img src="asset/img/highschool-logo1.png" width="25" height="22" class="img-setting01"></span>
+        </div>
+    </div>
+</body>
+</html>

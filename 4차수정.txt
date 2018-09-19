@@ -1,0 +1,25 @@
+180917 4차수정사항 - 본격개발
+
+- Bootstrap Accordion 적용해서 제목 클릭시 아코디언 튀어나와 본문 보이는 형식
+- 개발에 문제 있을경우 Jquery Ajax 적용해서 구현 할 것.(완성)
+- dashboard-demo에 Post로 title뿐만 아니라 maintext도 전송 할 것(위의 accordion 구현시 가능)(완성)
+- write document에 writeing-rule 생각해보고 추가하기(보류)
+- 모바일 전용 웹 개발하기(mobile.voteservice 만들기)
+- Index Footer 디자인 수정(login과 index 통합)
+- 미개발된 각 페이지 개발하기
+- '채택됨!' 아이콘 디자인 수정하기(눈에 더 잘 띄고 특별하게, ptag css수정할 수도 있음)
+
+
+- 웹서비스 이름 정하기
+
+
+
+개발 계획
+
+1. Node.js 를 마스터 함
+2. 원래 계획은 Mysql + PHP를 사용할 계획이였지만, 변경사항이 있어
+   Node.js(Express) + Mongodb를 사용할 것 - 호스팅을 어디서 받지
+3. 기능구현 아이디어
+
+* Node.js 지원하는 호스팅회사 찾기
+AWS student pack => AWS Hosting

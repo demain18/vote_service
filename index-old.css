@@ -1,0 +1,152 @@
+.body {
+    margin: 0;
+}
+a {
+    color: white;
+}
+a:link {
+    color: white;
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+.linkcolor:hover {
+    color: white;
+    text-decoration: none;
+}
+.container {
+    width: 1000px;
+}
+.navbar-custom {
+    background-color: #ffffff;
+}
+.background-grid1 {
+    width: 100%;
+    height: 600px;
+    background-image: url("asset/img/background-img10.jpg");
+    background-size: cover;
+    z-index: 1;
+}
+.starting-grid {
+    margin: 0;
+}
+.starting-grid > .content-grid {
+    width: 400px;
+}
+.content-position {
+    width: 350px;
+    position: relative;
+    top: 180px;
+    left: 200px;
+}
+.starting-grid > .eximage-grid {
+    width: 500px;
+}
+.ex-image-300300 {
+    position: relative;
+    top: 155px;
+    left: 170px;
+}
+.btn-getstart {
+    width: 130px;
+    text-align: left;
+}
+.icon-arrow {
+    position: absolute;
+    top: 6px;
+    left: 90px;
+}
+.margin-width-span {
+    margin-left: 10px;
+}
+.item-cards {
+    width: 790px;
+    position: relative;
+    top: -100px;
+    left: 50%;
+    margin-left: -400px!important;
+    margin-top: 50px;
+    z-index: 3;
+}
+.item-card {
+    padding: 20px 30px 0;
+    width: 175px;
+    margin: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    z-index: 3;
+}
+.item-card > .item-img {
+    position: relative;
+    left: 7px;
+}
+.item-card > p {
+    line-height: 12px;
+}
+.item-card > .p01 {
+    text-align: center;
+    margin-top: 5px;
+}
+.item-card > .p02 {
+    font-size: 12px;
+    text-align: center;
+    color: gray;
+}
+.item-card02 > .item-img {
+    position: relative;
+    top: 12px;
+    left: 19px;
+    margin-bottom: 34px;
+}
+.item-card03 > .item-img {
+    position: relative;
+    top: 5px;
+    left: 15px;
+    margin-bottom: 23px;
+}
+.item-card04 > .item-img {
+    position: relative;
+    top: 13px;
+    left: 16px;
+    margin-bottom: 23px;
+}
+.content-grid01 > p {
+    text-align: center;
+    font-size: 15px;
+}
+.content-grid01 > .p03 {
+    margin-bottom: 30px;
+}
+.background-grid2 {
+    height: 480px;
+}
+.background-grid3 {
+
+}
+.product-intro {
+	width: 650px;
+	position: relative;
+	left: 50%;
+	margin-left: -325px;
+}
+.product-intro > p {
+    text-align: left;
+    font-size: 20px;
+	line-height: 25px;
+}
+.linkcolor {
+    color: white;
+}
+.footer {
+	background-color: #C0C0C0;
+}
+.footer>.footer-grid01 {
+	margin-left: 50px;
+	margin-top: 20px;
+}
+.footer>.footer-grid02 {
+	margin-left: 30px;
+	margin-top: 10px;
+}
