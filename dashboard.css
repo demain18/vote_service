@@ -25,7 +25,7 @@
 }
 .postlist {
     width: 1000px;
-    height: 800px;
+	min-height: 800px;
     background-color: #FFFFFF;
     z-index: 3;
     position: relative;
@@ -187,8 +187,8 @@
 }
 .school-info {
 	position: absolute;
-	top: 810px;
-	left: 820px;
+	bottom: -35px;
+	right: 5px;
 }
 .img-setting01 {
 	position: relative;
