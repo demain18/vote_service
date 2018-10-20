@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
+<html lang="en"><head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -55,9 +54,21 @@
                             <em class="material-icons">notifications</em>
                         </span>
                         <span class="account navbar-icon-setting">
-                            <a href="login.html">
-                                <em class="material-icons">account_circle</em>
-                            </a>
+							<div class="dropdown pull-xs-right">
+						  <button class="btn bmd-btn-icon dropdown-toggle" type="button" id="lr1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<em class="material-icons">account_circle</em>
+						  </button>
+						  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="lr1">
+							  
+							<a href="my-upload.php"><button class="dropdown-item" type="button">내가 올린 게시물</button></a>
+							<a href="setting.php"><button class="dropdown-item" type="button">설정</button></a>
+							<a href="report.php"><button class="dropdown-item" type="button">글 신고하기</button></a>
+							<a href="page-for-admin.php"><button class="dropdown-item disabled" type="button">관리자 모드</button></a>
+							<div class="dropdown-divider"> </div>
+							<a href="contact.php"><a class="dropdown-item" href="#">Contact us</a></a>
+							 
+						  </div>
+						</div>
                         </span>
                     </div>
                 </div>
@@ -68,21 +79,21 @@
                         </button>
                     </a>
                     <h5 class="board-title">
-                        <strong>최다 추천 청원 목록</strong>
+                        <strong>최다 추천 청원 목록</strong><?php echo $_REQUEST['title'] ?>
                     </h5>
                     <div class="post-menus">
                         <ul class="nav nav-pills nav-fill">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">전체</a>
+                                <a class="nav-link" href="dashboard.php">전체</a>
                             </li>
                             <li class="nav-item nav-active">
-                                <a class="nav-link" href="#">최신인기</a>
+                                <a class="nav-link" href="dashboard.php">최신인기</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">청원투표</a>
+                                <a class="nav-link" href="vote-thisweek.php">이주의 청원</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link disabled" href="#">청원다시보기</a>
+                                <a class="nav-link" href="re-vote.html">청원다시보기</a>
                             </li>
                         </ul>
                     </div>
@@ -185,33 +196,10 @@
 						  <div class="panel">
 							<div class="panel-heading" role="tab" id="headingOne">
 							  <h4 class="panel-title">
-							<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTest" aria-expanded="true" aria-controls="collapseOne">
-							  <p class="post post-number01">
-								<span class="post-number">4</span>
-								<span class="post-name"><?php echo $_REQUEST['post-title']?></span>
-								<span class="post-upload-date">2018-09-10</span>
-								<span class="post-like">
-									<strong>[0]</strong>
-								</span>
-							</p>
-							</a>
-						  </h4>
-							</div>
-							<div id="collapseTest" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-							  <div class="panel-body">
-								<p class="post-text"><?php echo $_REQUEST['post-text']?></p>
-								<button type="button" class="btn btn-primary vote-agree">청원동의</button>
-							  </div>
-							</div>
-						  </div>
-							
-						  <div class="panel">
-							<div class="panel-heading" role="tab" id="headingOne">
-							  <h4 class="panel-title">
 							<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 							  <p class="post post-number01">
 								<span class="post-number">3</span>
-								<span class="post-name">학교 비품을 사용하기 불편합니다.<em class="material-icons icon-set03">check_circle</em></span>
+								<span class="post-name">학교 비품을 쉽게 빌릴수 있게 해주세요<em class="material-icons icon-set03">check_circle</em></span>
 								<span class="post-upload-date">2018-09-10</span>
 								<span class="post-like">
 									<strong>[25]</strong>
@@ -223,12 +211,15 @@
 							<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 							  <div class="panel-body">
 								<p class="post-text">학교에서 배드민턴채나 농구공등의 비품을 빌리는데 절차가 너무 복잡하고 어렵습니다, 농구부나 축구부는 말 한마디 만으로<br>공을 빌릴 수 있는데 일반 학생은 공을 빌리는데 절차가 까다롭습니다. 일반 학생도 쉽게 비품을 빌릴 수 있도록 바뀌었으면<br> 좋겠습니다.</p>
-								<button type="button" class="btn btn-primary vote-agree">청원동의</button>
+								<form action="#">
+									<button type="submit" class="btn btn-primary vote-agree">청원동의</button>
+									<span class="post-report">Report</span>
+								</form>
 							  </div>
 							</div>
 						  </div>
 						  <!-- end of panel -->
-						  
+
 						  <div class="panel">
 							<div class="panel-heading" role="tab" id="headingTwo">
 							  <h4 class="panel-title">
@@ -247,7 +238,10 @@
 							<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 							  <div class="panel-body">
 								<p class="post-text">학교의 체육관을 태권도부가 모두 사용하고 있어서 농구나 배드민턴등 운동이 하고싶은 일반 학생은 갈곳이 없습니다, 일반 학생들에게도<br>체육관을 열어주세요.</p>
-								<button type="button" class="btn btn-primary vote-agree">청원동의</button>
+								<form action="#">
+									<button type="submit" class="btn btn-primary vote-agree">청원동의</button>
+									<span class="post-report">Report</span>
+								</form>
 							  </div>
 							</div>
 						  </div>
@@ -270,9 +264,12 @@
 							</div>
 							<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 							  <div class="panel-body">
-							    <p class="post-text">점심시간에 나오는 노래를 어디서 선곡하는지는 모르겠지만... 존나 올드한 노래만 틀어줘서 듣기도 싫습니다.<br>학생들이 직접 나올 노래를 정할 수 있게 해주세요. </p>
-							    <button type="button" class="btn btn-primary vote-agree">청원동의</button>
-							  </div>
+								<p class="post-text">점심시간에 나오는 노래를 어디서 선곡하는지는 모르겠지만... 존나 올드한 노래만 틀어줘서 듣기도 싫습니다.<br>학생들이 직접 나올 노래를 정할 수 있게 해주세요.</p>
+									<form action="#">
+										<button type="submit" class="btn btn-primary vote-agree">청원동의</button>
+										<span class="post-report">Report</span>
+									</form>
+								</div>
 							</div>
 						  </div>
 						  <!-- end of panel -->
@@ -322,8 +319,7 @@
 					</p>
 					-->
             </div>
-            <span class="school-info">
-                <strong>서울아이티고등학교</strong><img src="asset/img/highschool-logo1.png" width="25" height="22" class="img-setting01"></span>
+			<span class="school-info"><strong>서울아이티고등학교</strong><img src="asset/img/highschool-logo1.png" width="25" height="22" class="img-setting01"></span>
         </div>
     </div>
 </body>

@@ -49,64 +49,6 @@
 	top: 90px;
 	left: 9px;
 }
-.post-menus {
-	height: 60px;
-	width: 1000px;
-	margin-top: -40px;
-}
-.post-menus>.nav>.nav-item:hover {
-	border-bottom: 3px solid #DFDFDF!important;
-}
-.post-menus>.nav>.nav-active {
-	border-bottom: 3px solid #DFDFDF!important;
-}
-/*
-.list-group {
-    margin-top: 6px;
-}
-.choose-list {
-    color:;
-}
-.list-group-item {
-    height: 40px;
-}
-.icon-setting {
-    position: relative;
-    top: -2px;
-    left: 8px;
-    width: 0;
-    font-size: 15px!important;
-}
-.voted > .icon-setting {
-    font-size: 17px!important;
-    color: black;
-    position: relative;
-    left: -17px;
-}
-.voted > .up-score {
-    color: black;
-    position: relative;
-    left: 10px;
-}
-.voted > .badge-setting {
-    position: relative;
-    top: -1px;
-    left: 5px;
-}
-.school-info {
-	position: absolute;
-	top: -25px;
-	left: 20px;
-}
-.school-info>p {
-	font-size: 15px;
-}
-.school-info>img {
-	position: relative;
-	top: -3px;
-	left: 3px;
-}
-*/
 .menu-list {
 	border-top: 3px solid black;
 	border-bottom: 1px solid #DFDFDF;
@@ -167,6 +109,38 @@
 	position: absolute;
 	left: 920px;
 }
+.post-text {
+	width: 950px;
+	position: relative;
+	background-color: rgba(239,239,239,1.00);
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 0px;
+}
+.panel-body {
+	width: 970px;
+	font-size: 13px;
+	color: #636363;
+	padding: 5px;
+}
+.vote-agree {
+	color: #3F51B5!important;
+	position: absolute;
+	left: 861px;
+	top: 5px;
+}
+.post-report {
+	color: #FF3D3D!important;
+	position: relative;
+	left: 725px;
+	top: 3px;
+}
+.btn-set {
+	color: #3F51B5!important;
+	position: relative;
+	top: 5px;
+	left: 5px;
+}
 .icon-set02 {
 	font-size: 16px!important;
 	position: relative;
@@ -185,11 +159,6 @@
 	top: -2px;
 	left: 7px;
 }
-.school-info {
-	position: absolute;
-	bottom: -35px;
-	right: 5px;
-}
 .img-setting01 {
 	position: relative;
 	top: -2px;
@@ -201,16 +170,16 @@
 .panel-collapse {
 	width: 970px;
 }
-.panel-body {
-	padding: 5px;
-	width: 970px;
-	font-size: 13px;
-	color: #636363;
+.user-info {
+	position: relative;
+	top: -13px;
 }
-.vote-agree {
-	color: #3F51B5!important;
-	margin: -10px;
-	margin-top: -20px;
-	position: absolute;
-	left: 885px;
+.dropdown-menu>button {
+	font-size: 15px;
+}
+.dropdown-menu>button:hover {
+	background-color: rgba(242,242,242,1.00);
+}
+.post-menus {
+	margin-top: -42px;
 }
