@@ -40,40 +40,45 @@
 			  		<img src="asset/img/img-iphone.png" width="350" height="230" class="index-image">
 				</div>
 			  <div class="login-grid">
-				  <h3>회원가입</h3>
+					<form action="./register_process.php" method="POST">
+
+
+						<h3>회원가입</h3>
 					  <div class="input-group mb-3">
 						  <div class="input-group-prepend">
 							<label class="input-group-text input-group-text-td1" for="inputGroupSelect01">학교명</label>
 						  </div>
-						  <select class="custom-select" id="inputGroupSelect01">
-							<option selected>학교를 선택하세요.</option>
-							<option value="1">서울아이티고등학교</option>
-							<option value="2">선린인터넷고등학교</option>
-							<option value="3">한세사이버보안고등학교</option>
+						  <select class="custom-select" id="inputGroupSelect01" name="school_select">
+							<option selected disabled>학교를 선택하세요.</option>
+							<option value="SeoulIt_highschool">서울아이티고등학교</option>
+							<option value="SunrinInternet_highschool">선린인터넷고등학교</option>
+							<option value="HanseiCyber_highschool">한세사이버보안고등학교</option>
 						  </select>
 					  </div>
 				  	  <div class="input-group mb-3">	
-						  <input type="text" class="form-control" placeholder="이름" aria-label="Recipient's username" aria-describedby="basic-addon2">
+						  <input type="text" class="form-control" placeholder="이름" name="user_name" aria-label="Recipient's username" aria-describedby="basic-addon2">
 					  </div>
 					  <div class="input-group mb-3">	
-						  <input type="text" class="form-control" placeholder="아이디" aria-label="Recipient's username" aria-describedby="basic-addon2">
+						  <input type="text" class="form-control" placeholder="아이디" name="user_id" aria-label="Recipient's username" aria-describedby="basic-addon2">
 					  </div>
 					  <div class="input-group mb-3">
-						  <input type="password" class="form-control" placeholder="비밀번호" aria-label="Recipient's username" aria-describedby="basic-addon2">
+						  <input type="password" class="form-control" placeholder="비밀번호" name="user_pw" aria-label="Recipient's username" aria-describedby="basic-addon2">
 					  </div>
-				  	  <div class="input-group mb-3">
-						  <input type="password" class="form-control" placeholder="비밀번호 재입력" aria-label="Recipient's username" aria-describedby="basic-addon2">
+				  	<div class="input-group mb-3">
+						  <input type="password" class="form-control" placeholder="비밀번호 재입력" name="user_pwc" aria-label="Recipient's username" aria-describedby="basic-addon2">
 					  </div>
 					  <div class="input-group mb-3">
 						  <label class="radio-inline">
-							<input type="radio" class="input-td1" name="inlineRadioOptions" id="inlineRadio1" value="option1">학생
+							<input type="radio" class="input-td1" name="user_type" id="inlineRadio1" value="학생">학생
 						  </label>
 						  <label class="radio-inline">
-							<input type="radio" class="input-td1" name="inlineRadioOptions" id="inlineRadio2" value="option2">선생님
-						  </label>
-						  
+							<input type="radio" class="input-td1" name="user_type" id="inlineRadio2" value="선생님">선생님
+							</label>
 					  </div>
-				  	  <a href="index.html"><button type="button" class="btn btn-raised btn-primary btn-td1">가입하기</button></a>
+						<button type="submit" class="btn btn-raised btn-primary btn-td1">가입하기</button>
+						
+
+					</form>
 				</div>
 				</div>
 				  		

@@ -1,9 +1,5 @@
 <?php
-$conn = mysqli_connect(
-  'localhost',
-  'root',
-  '1234',
-  'voteservice');
+require('./asset/php/db_connect.php');
 $today = date("Y-m-d");
 $descrition = nl2br($_POST['description']);
 // n12br함수를 이용해서 엔터값을 </br>으로 변환해준다

@@ -18,6 +18,9 @@
 	margin-left: -300px
 	*/
 }
+.login-grid>input {
+	height: 20px!important;
+}
 .radio-inline {
 	width: 80px;
 }

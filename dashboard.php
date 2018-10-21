@@ -16,6 +16,9 @@
                     $('body').bootstrapMaterialDesign();
                 });
             </script>
+        <?php
+        require('./asset/php/db_connect.php');
+        ?>
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
             <!-- Bootstrap Material Webframework, Google Material Icons -->
             <title>청원 서비스</title>
@@ -41,7 +44,8 @@
 						  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="lr1">
 							<a href="my-upload.php"><button class="dropdown-item" type="button">내가 올린 게시물</button></a>
 							<a href="setting.php"><button class="dropdown-item" type="button">설정</button></a>
-							<a href="report.php"><button class="dropdown-item" type="button">글 신고하기</button></a>
+                            <a href="report.php"><button class="dropdown-item" type="button">글 신고하기</button></a>
+                            <a href="logout.php"><button class="dropdown-item" type="button">로그아웃</button></a>
 							<a href="page-for-admin.php"><button class="dropdown-item disabled" type="button">관리자 모드</button></a>
 							<div class="dropdown-divider"> </div>
 							<a href="contact.php"><a class="dropdown-item" href="#">Contact us</a></a>
@@ -68,7 +72,7 @@
                                 <a class="nav-link" href="dashboard.php">최신인기</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="vote-thisweek.php">청원투표</a>
+                                <a class="nav-link" href="vote-thisweek.php">이주의 청원</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link disabled" href="dashboard.php">청원다시보기</a>
@@ -87,11 +91,6 @@
 					<div class="col-md-6 col-sm-6 accordion-margin">
 						<div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">
                           <?php
-                          $servername = "localhost";
-                          $username = "root"; // your username
-                          $password = "1234"; // your password
-                          $conn = mysqli_connect($servername, $username, $password, "voteservice");
-                          
                           $sql = "SELECT * FROM post ORDER BY post_number DESC";
                           $result = mysqli_query($conn, $sql)or die(mysqli_error($conn));
                           while($post = mysqli_fetch_array($result)) {
@@ -120,6 +119,7 @@
                                 </div>
                             </div>
                             ';
+                            // 청원동의와 report를 구현하는 법은 form으로 감싼 후 hidden input을 주면 가능할 듯.
                           }
                           ?>
 						</div>
