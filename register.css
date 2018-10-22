@@ -5,7 +5,7 @@
     background-size: cover;
     background-attachment: fixed;
 }
-.login-grid {
+.register-grid {
 	width: 600px;
 	background-color: rgba(255,255,255,0.34);
 	border-radius: 5px;
@@ -18,7 +18,7 @@
 	margin-left: -300px
 	*/
 }
-.login-grid>input {
+.register-grid>input {
 	height: 20px!important;
 }
 .radio-inline {
@@ -27,7 +27,7 @@
 .input-group-text-td1 {
 	margin-right: 10px;
 }
-.login-grid>h3 {
+.registern-grid>h3 {
 	margin-bottom: 20px;
 }
 .custom-select {

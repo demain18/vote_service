@@ -14,6 +14,7 @@ echo ($user_pw.'</br>');
 echo ($user_pwc.'</br>');
 echo ($user_type.'</br>');
 */
+
 if($school==NULL || $user_name==NULL || $user_id==NULL || $user_pw==NULL || $user_pwc==NULL || $user_type==NULL) {
     echo("<script>alert('빈칸을 모두 채워주세요.')</script>");
     echo("<script>location.replace('register.html');</script>"); 
@@ -25,9 +26,10 @@ if($user_pw!=$user_pwc) {
     exit();
 }
 
-$sql = "SELECT * FROM user_info WHERE user_id=$user_id";
-$result = mysqli_query($conn, $sql);
-if($result=true) {
+$sql = "SELECT * FROM user_info WHERE user_id='$user_id'";
+$result = mysqli_query($conn, $sql)or die(mysqli_error($conn));
+$user_row = mysqli_num_rows($result);
+if($user_row == 1) {
     echo("<script>alert('중복된 아이디입니다.')</script>");
     echo("<script>location.replace('register.html');</script>");
     exit();

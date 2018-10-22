@@ -7,17 +7,11 @@
 }
 .login-grid {
 	width: 600px;
-	height: 395px!important;
+	height: 395px;
 	background-color: rgba(255,255,255,0.34);
 	border-radius: 5px;
 	filter: blur(0px);
 	padding: 50px;
-	/*
-	position: relative;
-	top: 10%;
-	left: 50%;
-	margin-left: -300px
-	*/
 }
 .radio-inline {
 	width: 80px;
