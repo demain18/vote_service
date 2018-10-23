@@ -5,18 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
-        <link rel="stylesheet" href="dashboard.css?ver=1">
+        <link rel="stylesheet" href="dashboard.css?ver=2">
         <link rel="stylesheet" href="my-navbar.css?ver=1">
         <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
         <script>
-                $(document).ready(function () {
-                    $('body').bootstrapMaterialDesign();
-                });
-            </script>
+        $(document).ready(function () {
+            $('body').bootstrapMaterialDesign();
+        });
+        </script>
         <?php
+        session_start();
+        // 세션_스타트는 무조건 제일위에!
         require('./asset/php/db_connect.php');
         ?>
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -45,7 +47,7 @@
 							<a href="my-upload.php"><button class="dropdown-item" type="button">내가 올린 게시물</button></a>
 							<a href="setting.php"><button class="dropdown-item" type="button">설정</button></a>
                             <a href="report.php"><button class="dropdown-item" type="button">글 신고하기</button></a>
-                            <a href="index.html"><button class="dropdown-item" type="button">로그아웃</button></a>
+                            <a href="logout_process.php""><button class="dropdown-item" type="button">로그아웃</button></a>
 							<a href="page-for-admin.php"><button class="dropdown-item disabled" type="button">관리자 모드</button></a>
 							<div class="dropdown-divider"> </div>
 							<a href="contact.php"><a class="dropdown-item" href="#">Contact us</a></a>
@@ -91,8 +93,10 @@
 					<div class="col-md-6 col-sm-6 accordion-margin">
 						<div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">
                           <?php
-                          $sql = "SELECT * FROM post ORDER BY post_number DESC";
+                          // echo "제가 살고 있는 도시는 {$_SESSION['city']}입니다.<br>";
+                          $sql = "SELECT * FROM ".$_SESSION['session_user_school']."_post ORDER BY post_number DESC";
                           $result = mysqli_query($conn, $sql)or die(mysqli_error($conn));
+                          
                           while($post = mysqli_fetch_array($result)) {
                             echo '
                                 <div class="panel">
@@ -112,14 +116,22 @@
                                 </div>
                                 <div id="collapse'.$post['post_number'].'" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                 <div class="panel-body">
-                                    <p class="post-text">'.$post['description'].'</p>
-                                    <button type="button" class="btn btn-primary vote-agree">청원동의</button>
-                                    <span class="post-report">Report</span>
+                                    <div class="post-text">'.$post['description'].'</div>
+
+                                    <form action="./vote_agree_process.php" method="POST">
+                                        <input type="hidden" name="vote-agree-postnumber" value="'.$post['post_number'].'">
+                                        <button type="submit" class="btn btn-primary vote-agree">청원동의</button>
+                                    </form>
+                                    <form action="./report_process.php" method="POST" class="report-margin">
+                                        <input type="hidden" name="post-report-postnumber" value="'.$post['post_number'].'">
+                                        <button type="submit" class="post-report">Report</button>
+                                    </form>
+
                                 </div>
                                 </div>
                             </div>
                             ';
-                            // 청원동의와 report를 구현하는 법은 form으로 감싼 후 hidden input을 주면 가능할 듯.
+
                           }
                           ?>
 						</div>

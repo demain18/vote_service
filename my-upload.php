@@ -43,7 +43,7 @@
 							<a href="my-upload.php"><button class="dropdown-item" type="button">내가 올린 게시물</button></a>
 							<a href="setting.php"><button class="dropdown-item" type="button">설정</button></a>
 							<a href="report.php"><button class="dropdown-item" type="button">글 신고하기</button></a>
-                            <a href="index.html"><button class="dropdown-item" type="button">로그아웃</button></a>
+                            <a href="logout_process.php"><button class="dropdown-item" type="button">로그아웃</button></a>
                             <a href="page-for-admin.php"><button class="dropdown-item disabled" type="button">관리자 모드</button></a>
 							<div class="dropdown-divider"> </div>
 							<a href="contact.php"><a class="dropdown-item" href="#">Contact us</a></a>

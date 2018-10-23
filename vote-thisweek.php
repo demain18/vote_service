@@ -63,7 +63,7 @@
 							<a href="my-upload.php"><button class="dropdown-item" type="button">내가 올린 게시물</button></a>
 							<a href="setting.php"><button class="dropdown-item" type="button">설정</button></a>
 							<a href="report.php"><button class="dropdown-item" type="button">글 신고하기</button></a>
-                            <a href="index.html"><button class="dropdown-item" type="button">로그아웃</button></a>
+                            <a href="logout_process.php"><button class="dropdown-item" type="button">로그아웃</button></a>
                             <a href="page-for-admin.php"><button class="dropdown-item disabled" type="button">관리자 모드</button></a>
 							<div class="dropdown-divider"> </div>
 							<a href="contact.php"><a class="dropdown-item" href="#">Contact us</a></a>
@@ -95,7 +95,7 @@
 						<div class="row page-title-column">
 							<p class="page-title">5월 첫째주 청원</p><!--<div class="custom-icon">?</div>-->
 							<a href="#" class="custom-icon" data-toggle="tooltip" data-placement="bottom" title="이주의 청원은 매주 월~금요일 동안 가장 많은 청원동의를 받은 글이 채택되며,
-							토~일요일까지 유지된다.">?</a>
+							토~일요일까지 유지됩니다. 갱신일은 매주 토요일 3시입니다.">?</a>
 						</div>
 						<p class="post-info"><span class="post-title"><strong>테스트 제목</strong></span><span class="post-date">2012-12-12</span></p>
 						<p class="post-agree">청원추천 수 <span class="post-agree-count"><strong>20</strong></span></p>

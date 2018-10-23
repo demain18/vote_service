@@ -61,3 +61,8 @@
 	top: 50px;
 	left: 40px;
 }
+.account {
+	position: absolute;
+	top: 8px!important;
+	left: 981px!important;
+}
