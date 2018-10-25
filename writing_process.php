@@ -6,13 +6,14 @@ $descrition = nl2br($_POST['description']);
 // n12br함수를 이용해서 엔터값을 </br>으로 변환해준다
 $sql = "
   INSERT INTO {$_SESSION['session_user_school']}_post
-    (post_number, title, description, uploader, date, agree_count)
+    (post_number, title, description, uploader, date, agree_count, report_count)
     VALUES(
         '',
         '{$_POST['title']}',
         '$descrition',
         '{$_SESSION['session_user_name']}',
         '$today',
+        '0',
         '0'
     )
 ";
