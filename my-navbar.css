@@ -53,3 +53,10 @@ a:hover {
 	color: black!important;
 	text-decoration: underline;
 }
+.user_profile {
+	padding: 15px;
+	height: 80px;
+}
+.user_profile>p {
+	color: gray;
+}

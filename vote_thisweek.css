@@ -10,8 +10,9 @@
 .background-color01 {
 	width: 100%;
 	height: 400px;
-	background: rgb(68,57,255);
-    background: linear-gradient(90deg, rgba(68,57,255,1) 0%, rgba(99,99,255,1) 37%, rgba(123,212,249,1) 100%);
+	background: #56CCF2;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	position: absolute;
 	top: 40px;
 	
@@ -89,13 +90,17 @@
 }
 .post-description {
 	width: 100%;
-	height: 150px;
+	min-height: 150px;
 	background-color: rgba(239,239,239,1.00);
 	border-radius: 5px;
 	padding: 10px;
 }
 .comment {
 	margin-top: 10px;
+	width: 800px!important;
+}
+.comment-select {
+	width: 300px!important;
 }
 .custom-select {
 	background-color: rgba(255,255,255,0.00)!important;
@@ -106,15 +111,23 @@
 .comment-submit {
 	color: #3F51B5!important;
 	position: relative;
-	top: 4px;
+	top: 3px;
+	left: 5px;
+	height: 40px;
 }
 .icon-check {
 	color: red;
-	font-size: 17px!important;
+	font-size: 15px!important;
 	position: relative;
-	top: 3px;
+	top: 2px;
 	left: -2px;
 }
 .comment-description {
 	color: rgba(151,151,151,1.00);
+}
+.comment-block {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-size: 13px;
+	color: gray;
 }

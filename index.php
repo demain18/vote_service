@@ -7,7 +7,7 @@
 		
 		<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
 		<link rel="stylesheet" href="my-navbar.css?ver=2">
-        <link rel="stylesheet" href="index.css?ver=1">
+        <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
@@ -24,11 +24,9 @@
         </head>
         <body>
             <div class="background-img1">
-				
-				
 				<div class="my-navbar">
 					<div class="navbar-container">
-						<span class="brand"><a href="index.html"><strong>청원서비스</strong></a></span>
+						<span class="brand"><a href="index.php"><strong>청원서비스</strong></a></span>
 						<span class="alerm navbar-icon-setting"><em class="material-icons">notifications</em></span>
 						<span class="account navbar-icon-setting"><a href="login.html"><em class="material-icons">account_circle</em></a></span>
 					</div>
@@ -49,7 +47,7 @@
 							<input type="password" class="form-control" name="user_pw" placeholder="비밀번호" aria-label="Recipient's username" aria-describedby="basic-addon2">
 						</div>
 							<button type="submit" class="btn btn-raised btn-primary btn-td1">로그인하기</button>
-							<a href="register.html"><p class="go-register">회원가입하기 <em class="material-icons icon-td1">keyboard_arrow_right</em></p></a>
+							<a href="register.php"><p class="go-register">회원가입하기 <em class="material-icons icon-td1">keyboard_arrow_right</em></p></a>
 					  </div>
 				</form>
 				</div>

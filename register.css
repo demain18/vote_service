@@ -1,7 +1,7 @@
 .background-img1 {
     width: 100%;
     height: 1300px;
-    background-image: url("asset/img/background-img10.jpg");
+    background-image: url("asset/img/login-wallpaper.jpg");
     background-size: cover;
     background-attachment: fixed;
 }
@@ -11,12 +11,6 @@
 	border-radius: 5px;
 	filter: blur(0px);
 	padding: 50px;
-	/*
-	position: relative;
-	top: 10%;
-	left: 50%;
-	margin-left: -300px
-	*/
 }
 .register-grid>input {
 	height: 20px!important;

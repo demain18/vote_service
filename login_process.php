@@ -14,7 +14,7 @@ if($total_rows == 1) {
     $result = mysqli_query($conn, $sql)or die(mysqli_error($conn));
     $total_rows = mysqli_num_rows($result);
     // echo ('second_row : '.$total_rows.'<br />');
-    if($total_rows == 1) {
+        if($total_rows == 1) {
         // 사용자 세션 정보
         $sql = "SELECT * FROM user_info WHERE user_id='$user_id'";
         $result = mysqli_query($conn, $sql)or die(mysqli_error($conn));
@@ -31,6 +31,7 @@ if($total_rows == 1) {
         $_SESSION["session_user_name"] = "{$insession_user_name}";
         $_SESSION["session_user_school"] = "{$insession_user_school}";
         $_SESSION["session_user_type"] = "{$insession_user_type}";
+        $_SESSION["session_empty01"] = "";
         
         $sql = "SELECT * FROM user_info WHERE user_id='$user_id'";
         $result = mysqli_query($conn, $sql)or die(mysqli_error($conn));
@@ -41,12 +42,12 @@ if($total_rows == 1) {
         exit();
     } else {
         echo("<script>alert('비밀번호가 틀립니다.')</script>");
-        echo("<script>location.replace('index.html');</script>");
+        echo("<script>location.replace('index.php');</script>");
         exit();
     }
 } else {
     echo("<script>alert('아이디가 틀립니다.')</script>");
-    echo("<script>location.replace('index.html');</script>");
+    echo("<script>location.replace('index.php');</script>");
     exit();
 }
 ?>

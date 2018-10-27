@@ -4,10 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-		
-		<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
-		<link rel="stylesheet" href="my-navbar.css?ver=1">
-        <link rel="stylesheet" href="register.css?ver=1">
+				<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
+				<link rel="stylesheet" href="my-navbar.css">
+        <link rel="stylesheet" href="register.css">
         <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
@@ -28,7 +27,7 @@
 				
 				<div class="my-navbar">
 					<div class="navbar-container">
-						<span class="brand"><a href="index.html"><strong>청원서비스</strong></a></span>
+						<span class="brand"><a href="index.php"><strong>청원서비스</strong></a></span>
 						<span class="alerm navbar-icon-setting"><em class="material-icons">notifications</em></span>
 						<span class="account navbar-icon-setting"><a href="login.html"><em class="material-icons">account_circle</em></a></span>
 					</div>
@@ -69,10 +68,10 @@
 					  </div>
 					  <div class="input-group mb-3">
 						  <label class="radio-inline">
-							<input type="radio" class="input-td1" name="user_type" id="inlineRadio1" value="학생">학생
+							<input type="radio" class="input-td1" name="user_type" id="inlineRadio1" value="student"">학생
 						  </label>
 						  <label class="radio-inline">
-							<input type="radio" class="input-td1" name="user_type" id="inlineRadio2" value="선생님">선생님
+							<input type="radio" class="input-td1" name="user_type" id="inlineRadio2" value="teacher">선생님
 							</label>
 					  </div>
 						<button type="submit" class="btn btn-raised btn-primary btn-td1">가입하기</button>

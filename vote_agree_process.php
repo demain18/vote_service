@@ -38,7 +38,7 @@ if($row_cnt == 1) {
     ";
     */
     $result = mysqli_query($conn, $sql)or die(mysqli_error($conn));
-    echo ('<script>alert("청원동의 하였습니다.")</script>');
+    echo ('<script>alert("청원에 동의했습니다.")</script>');
     echo("<script>location.replace('dashboard.php');</script>");
 }
 /*
