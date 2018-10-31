@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 				<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
-				<link rel="stylesheet" href="my-navbar.css">
-        <link rel="stylesheet" href="register.css">
+				<link rel="stylesheet" href="/asset/css/my-navbar.css">
+        <link rel="stylesheet" href="/asset/css/register.css?ver=2">
         <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
@@ -39,7 +39,7 @@
 			  		<img src="asset/img/img-iphone.png" width="350" height="230" class="index-image">
 				</div>
 			  <div class="register-grid">
-					<form action="./register_process.php" method="POST">
+					<form action="./asset/modules/register_process.php" method="POST">
 
 
 						<h3>회원가입</h3>
@@ -50,8 +50,8 @@
 						  <select class="custom-select" id="inputGroupSelect01" name="school_select">
 							<option selected disabled>학교를 선택하세요.</option>
 							<option value="seoulit_highschool">서울아이티고등학교</option>
-							<option value="sunrin_internet_highschool">선린인터넷고등학교</option>
-							<option value="hansei_cyber_highschool">한세사이버보안고등학교</option>
+							<option disabled value="sunrin_internet_highschool">선린인터넷고등학교(Locked)</option>
+							<option disabled value="hansei_cyber_highschool">한세사이버보안고등학교(Locked)</option>
 						  </select>
 					  </div>
 				  	  <div class="input-group mb-3">	

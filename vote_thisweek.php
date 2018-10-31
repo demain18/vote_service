@@ -4,8 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
-        <link rel="stylesheet" href="vote_thisweek.css">
-        <link rel="stylesheet" href="my-navbar.css">
+        <link rel="stylesheet" href="/asset/css/vote_thisweek.css">
+        <link rel="stylesheet" href="/asset/css/my-navbar.css">
         <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
@@ -17,9 +17,9 @@
         </script>
         <?php
         session_start();
-        require('./asset/php/db_connect.php');
-        require('./asset/php/user_profile.php');
-        require('./asset/php/school_check.php');
+        require('./asset/modules/db_connect.php');
+        require('./asset/modules/user_profile.php');
+        require('./asset/modules/school_check.php');
         ?>
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
             <!-- Bootstrap Material Webframework, Google Material Icons -->
@@ -57,7 +57,7 @@
                             ?>
 							<a href="my-upload.php"><button class="dropdown-item" type="button">내가 올린 게시물</button></a>
 							<a href="setting.php"><button class="dropdown-item" type="button">설정</button></a>
-                            <a href="logout_process.php"><button class="dropdown-item" type="button">로그아웃</button></a>
+                            <a href="./asset/modules/logout_process.php"><button class="dropdown-item" type="button">로그아웃</button></a>
                             <a href="page-for-admin.php"><button class="dropdown-item disabled" type="button">관리자 모드</button></a>
 							<div class="dropdown-divider"> </div>
 							<a href="contact.php"><a class="dropdown-item" href="#">Contact us</a></a>
@@ -135,7 +135,7 @@
                                 $result = mysqli_query($conn, $sql)or die(mysqli_error($conn));
                                 $result = mysqli_fetch_array($result);
                                 echo '
-                                <form action="vote_thisweek_comment_process.php" method="POST">
+                                <form action="./asset/modules/vote_thisweek_comment_process.php" method="POST">
                                     <div class="input-group mb-3 comment">
                                     <input type="hidden" name="vote_number" value="'.$result['vote_number'].'">
                                     <input type="text" name="description" placeholder="  한번 청원에 답변하면 수정하거나 삭제할 수 없습니다." class="input-text">

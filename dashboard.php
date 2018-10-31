@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
-        <link rel="stylesheet" href="dashboard.css?ver=3">
-        <link rel="stylesheet" href="my-navbar.css">
+        <link rel="stylesheet" href="/asset/css/dashboard.css">
+        <link rel="stylesheet" href="/asset/css/my-navbar.css">
         <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
@@ -19,9 +19,11 @@
         <?php
         session_start();
         // 세션_스타트는 무조건 제일위에!
-        require('./asset/php/db_connect.php');
-        require('./asset/php/user_profile.php');
-        require('./asset/php/school_check.php');
+        require('./asset/modules/db_connect.php');
+        require('./asset/modules/user_profile.php');
+        require('./asset/modules/school_check.php');
+
+        
         ?>
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
             <!-- Bootstrap Material Webframework, Google Material Icons -->
@@ -60,7 +62,7 @@
                             ?>
 							<a href="my-upload.php"><button class="dropdown-item" type="button">내가 올린 게시물</button></a>
 							<a href="setting.php"><button class="dropdown-item" type="button">설정</button></a>
-                            <a href="logout_process.php""><button class="dropdown-item" type="button">로그아웃</button></a>
+                            <a href="./asset/modules/logout_process.php""><button class="dropdown-item" type="button">로그아웃</button></a>
 							<a href="page-for-admin.php"><button class="dropdown-item disabled" type="button">관리자 모드</button></a>
 							<div class="dropdown-divider"> </div>
 							<a href="contact.php"><a class="dropdown-item" href="#">Contact us</a></a>
@@ -96,7 +98,6 @@
                     </div>
 
                     <p class="menu-list">
-                        <span class="menu menu01">번호</span>
                         <span class="menu menu02">제목</span>
                         <span class="menu menu03">청원일</span>
                         <span class="menu menu04">참여인원</span>
@@ -111,14 +112,16 @@
                           $result = mysqli_query($conn, $sql);//or die(mysqli_error($conn));
                           if($result == true) {
                             while($post = mysqli_fetch_array($result)) {
+                                $post_title = htmlspecialchars($post['title']);
+                                $post_description = htmlspecialchars($post['description']);
+
                                 echo '
                                     <div class="panel">
                                     <div class="panel-heading" role="tab" id="heading'.$post['post_number'].'">
                                     <h4 class="panel-title">
                                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'.$post['post_number'].'" aria-expanded="true" aria-controls="collapseOne">
                                     <p class="post post-number01">
-                                        <span class="post-number">'.$post['post_number'].'</span>
-                                        <span class="post-name">'.$post['title'].'</span>
+                                        <span class="post-name">'.$post_title.'</span>
                                         <span class="post-upload-date">'.$post['date'].'</span>
                                         <span class="post-like">
                                             <strong>'.$post['agree_count'].'</strong>
@@ -129,13 +132,13 @@
                                     </div>
                                     <div id="collapse'.$post['post_number'].'" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                     <div class="panel-body">
-                                        <div class="post-text">'.$post['description'].'</div>
+                                        <div class="post-text">'.$post_description.'</div>
     
-                                        <form action="./vote_agree_process.php" method="POST">
+                                        <form action="./asset/modules/vote_agree_process.php" method="POST">
                                             <input type="hidden" name="vote-agree-postnumber" value="'.$post['post_number'].'">
                                             <button type="submit" class="btn btn-primary vote-agree">청원동의</button>
                                         </form>
-                                        <form action="./report_process.php" method="POST" class="report-margin">
+                                        <form action="./asset/modules/report_process.php" method="POST" class="report-margin">
                                             <input type="hidden" name="post-report-postnumber" value="'.$post['post_number'].'">
                                             <button type="submit" class="post-report">Report</button>
                                         </form>

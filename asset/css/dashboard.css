@@ -15,7 +15,6 @@
 	background: linear-gradient(to right, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	position: absolute;
 	top: 40px;
-	
 }
 .navbar-custom {
     background-color: #ffffff;
@@ -60,21 +59,17 @@
 .menu {
 	line-height: 40px;
 }
-.menu01 {
-	position: relative;
-	left: 10px;
-}
 .menu02 {
 	position: relative;
-	left: 390px;
+	left: 370px;
 }
 .menu03 {
 	position: relative;
-	left: 740px;
+	left: 777px;
 }
 .menu04 {
 	position: relative;
-	left: 765px;
+	left: 800px;
 }
 .post-grid {
 	margin-top: -30px;
@@ -95,7 +90,7 @@
 }
 .post-name {
 	position: absolute;
-	left: 70px;
+	left: 30px;
 }
 .post-name:hover {
 	text-decoration: underline!important;

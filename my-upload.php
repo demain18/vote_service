@@ -4,8 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
-        <link rel="stylesheet" href="my-upload.css?ver=20">
-        <link rel="stylesheet" href="my-navbar.css">
+        <link rel="stylesheet" href="/asset/css/my-upload.css?ver=20">
+        <link rel="stylesheet" href="/asset/css/my-navbar.css">
         <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
@@ -18,9 +18,9 @@
             </script>
             <?php
             session_start();
-            require('./asset/php/db_connect.php');
-            require('./asset/php/user_profile.php');
-            require('./asset/php/school_check.php');
+            require('./asset/modules/db_connect.php');
+            require('./asset/modules/user_profile.php');
+            require('./asset/modules/school_check.php');
             ?>
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
             <!-- Bootstrap Material Webframework, Google Material Icons -->
@@ -58,7 +58,7 @@
                             ?>
 							<a href="my-upload.php"><button class="dropdown-item" type="button">내가 올린 게시물</button></a>
 							<a href="setting.php"><button class="dropdown-item" type="button">설정</button></a>
-                            <a href="logout_process.php"><button class="dropdown-item" type="button">로그아웃</button></a>
+                            <a href="./asset/modules/logout_process.php"><button class="dropdown-item" type="button">로그아웃</button></a>
                             <a href="page-for-admin.php"><button class="dropdown-item disabled" type="button">관리자 모드</button></a>
 							<div class="dropdown-divider"> </div>
 							<a href="contact.php"><a class="dropdown-item" href="#">Contact us</a></a>
@@ -76,10 +76,12 @@
                     $result = mysqli_query($conn, $sql);
                     if($result == true) {
                         while($post = mysqli_fetch_array($result)) {
+                            $post_title = htmlspecialchars($post['title']);
+                            $post_description = htmlspecialchars($post['description']);
                             echo '
-                              <h5>'.$post['post_number'].'번 '.$post['title'].$post['title'].$post['date'].' 추천수 : '.$post['agree_count'].'</h5>
-                              <p>'.$post['description'].'</p>
-                              <form action="./mypost_delete_process.php" method="POST">
+                              <h5>'.$post['post_number'].'번 '.$post_title.' <strong>'.$post['date'].'</strong> 추천수 : <strong>'.$post['agree_count'].'</strong></h5>
+                              <p>'.$post_description.'</p>
+                              <form action="./asset/modules/mypost_delete_process.php" method="POST">
                                   <input type="hidden" name="delete_post" value="'.$post['post_number'].'">
                                   <button type="submit" class="delete-post">삭제하기</button>
                               </form>
